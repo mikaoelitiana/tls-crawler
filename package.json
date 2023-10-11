@@ -1,0 +1,29 @@
+{
+    "name": "tls-crawler",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "This is an example of a Crawlee project.",
+    "dependencies": {
+        "crawlee": "^3.0.0",
+        "dotenv": "^16.3.1",
+        "form-data": "^4.0.0",
+        "node-fetch": "^3.3.2",
+        "playwright": "*"
+    },
+    "devDependencies": {
+        "@apify/tsconfig": "^0.1.0",
+        "@types/node": "^18.0.0",
+        "ts-node": "^10.8.0",
+        "typescript": "^5.0.0"
+    },
+    "scripts": {
+        "start": "npm run start:dev",
+        "start:prod": "node dist/main.js",
+        "start:dev": "node --no-warnings=ExperimentalWarning --loader ts-node/esm/transpile-only src/main.ts",
+        "build": "tsc",
+        "test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1",
+        "postinstall": "npx crawlee install-playwright-browsers"
+    },
+    "author": "It's not you it's me",
+    "license": "ISC"
+}
